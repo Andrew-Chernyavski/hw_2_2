@@ -1,6 +1,0 @@
-primeFactors n = [x | x <- [2..(n - 1)], (rem n x) == 0]
-generate :: (Eq a) => [a]->a->[a]
-generate' [x] b = if (primeFactors b == [1])
-			then generate' ([x] ++ [b]) (b+1)
-			else generate' [x] (b+1) 
-generate = generate' [2] 3
